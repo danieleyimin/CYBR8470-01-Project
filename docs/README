@@ -1,0 +1,26 @@
+# Project Requirements & Architecture
+
+## User Stories
+
+* As a **Security Analyst**, I want to **register new IT hardware and software assets into the system**, so I can **maintain a complete inventory of organization-wide endpoints.**
+  * **Acceptance Criteria:**
+    * The asset creation form requires hostname, IP address, operating system version, and department ownership.
+    * Newly added assets immediately appear in the main dashboard inventory list.
+
+* As a **Vulnerability Manager**, I want to **associate CVE records and CVSS risk scores to specific software assets**, so I can **quantify exact exposure levels across the network.**
+  * **Acceptance Criteria:**
+    * The system validates CVE ID formats.
+    * Entering a CVSS score automatically categorizes the risk level into Low, Medium, High, or Critical.
+
+## Mis-User Stories & Mitigation Criteria
+
+* As a **malicious unauthenticated actor**, I want to **inject arbitrary SQL payloads into the global asset search bar**, so I can **extract sensitive database tables.**
+  * **Mitigation Criteria:**
+    * All database queries must utilize Django ORM parameterized statements to entirely neutralize raw SQL injection vectors.
+
+## Architectural Design Assets
+
+* **Mockup:** ![UI Mockup](./mockup.png)
+* **C4 Level 1 (Context):** ![C4 Context Diagram](./c4-context.png)
+* **C4 Level 2 (Container):** ![C4 Container Diagram](./c4-container.png)
+* **C4 Level 3 (Component):** ![C4 Component Diagram](./c4-component.png)
