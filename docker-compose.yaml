@@ -16,7 +16,7 @@ services:
     volumes:
       - .:/app
     ports:
-      - "8000:8000"
+      - "9000:8000"
     environment:
       - DB_NAME=vulntrack_db
       - DB_USER=postgres
